@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-layout">
+            <div class="game-container">
+                <canvas id="tetris" width="300" height="500"></canvas>
+            </div>
+            
+            <div class="game-info">
+                <div class="username-display">
+                    <p>Player: <span id="username">Player</span></p>
+                </div>
+                <div class="score-container">
+                    <div class="score">
+                        <p>Score: <span id="score">0</span></p>
+                    </div>
+                    <div class="high-score">
+                        <p>High Score: <span id="highScore">0</span></p>
+                    </div>
+                    <div class="time">
+                        <p>Time: <span id="time">2:00</span></p>
+                    </div>
+                </div>
+                <div class="next-piece-container">
+                    <p>Next Piece:</p>
+                    <canvas id="nextPiece" width="120" height="120"></canvas>
+                </div>
+                <button id="howToPlay" class="how-to-play-btn">How to Play</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="howToPlayModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Play</h2>
+            <p>Tetris is a game where you try to create complete lines by directing falling blocks.</p>
+            <ul>
+                <li>← → Keys: Move blocks left or right</li>
+                <li>↑ Key: Rotate block counterclockwise</li>
+                <li>↓ Key: Rotate block clockwise</li>
+                <li>Space Key: Drop block quickly</li>
+            </ul>
+            <p>The game lasts for 2 minutes. Try to get the highest score in this time!</p>
+        </div>
+    </div>
+
+    <div id="usernameModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Your Username</h2>
+            <form id="usernameForm">
+                <input type="text" id="usernameInput" placeholder="Enter username" maxlength="15" required>
+                <button type="submit" class="submit-btn">Start Game</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html> 
